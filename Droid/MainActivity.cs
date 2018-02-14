@@ -8,6 +8,11 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Push;
+
 namespace AppCenterXFDemo.Droid
 {
     [Activity(Label = "AppCenterXFDemo.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -19,6 +24,13 @@ namespace AppCenterXFDemo.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
+
+            //AppCenter.LogLevel = LogLevel.Debug;
+
+            //Push.SetSenderId("");
+
+            //AppCenter.Start("", typeof(Analytics), typeof(Crashes),typeof(Push));
+
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
